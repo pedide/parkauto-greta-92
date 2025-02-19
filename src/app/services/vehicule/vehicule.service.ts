@@ -11,11 +11,11 @@ export class VehiculeService {
   constructor(private http:HttpClient) { }
 
   findAllVehicules(){
-    return this.http.get(AppSettings.APP_URL +"vehicules");
+    return this.http.get(AppSettings.APP_URL +"/vehicules");
   }
 
   saveVehicule(vehicule:Vehicule){
 
-    return this.http.post(AppSettings.APP_URL + "vehicules", vehicule);
+    return this.http.post(AppSettings.APP_URL + "/vehicules", vehicule);
   }
 }

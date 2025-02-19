@@ -20,7 +20,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'user',
+    path: 'user/management',
     component: UserComponent
   }
   ,
