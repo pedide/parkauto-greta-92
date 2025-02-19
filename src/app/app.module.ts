@@ -7,13 +7,19 @@ import { VehiculeComponent } from './components/vehicule/vehicule.component';
 import { VoitureComponent } from './components/voiture/voiture.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
+import { UserComponent } from './components/user/user.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VehiculeComponent,
     VoitureComponent,
-    HeaderComponent
+    HeaderComponent,
+    UserComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
