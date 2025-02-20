@@ -11,7 +11,11 @@ import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
-import { NotifierModule } from 'angular-notifier';
+import { NotificationModule } from './notification.module';
+import { NotificationService } from './services/notification/notification.service';
+import { AuthenticationService } from './services/authentication/authentication.service';
+import { UserService } from './services/user/user.service';
+
 
 @NgModule({
   declarations: [
@@ -28,9 +32,10 @@ import { NotifierModule } from 'angular-notifier';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NotifierModule,
+    NotificationModule
+   
   ],
-  providers: [],
+  providers: [NotificationService,AuthenticationService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
