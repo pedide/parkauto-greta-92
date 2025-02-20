@@ -28,12 +28,24 @@
                                     <span class="help-block" style="color:red" *ngIf="passwordInput.invalid && passwordInput.touched">
                                         Veuillez entrer un mot de passe</span>
                             </div>
+                            <button type="submit" class="btn btn-theme">
+                                <i *ngIf="showLoading" class="fas fa-spinner fa-spin"> </i>
+                                <span *ngIf="showLoading"> &nbsp;&nbsp;Chargement...</span>
+                                <span *ngIf="!showLoading"> Se connecter</span>
+                            </button>
+                            <a href="#" class="forgot-link float-right text-primary" style="margin-left: 2em;">Mot de passe oublié ?</a>
 
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- end card -->
+        
+        <p class="text-muted text-center mt-3 mb-0">Don't have an account? <a routerLink="/register" href="register.html"
+                class="text-primary ml-1">register</a></p>
+        
+        <!-- end row -->
     </div>
  </div>
 

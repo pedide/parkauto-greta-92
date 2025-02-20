@@ -7,9 +7,13 @@ import { UserComponent } from './components/user/user.component';
 import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
+
+ { path: '', redirectTo: '/vehicule',
+   pathMatch: 'full' 
+  }, 
   {
     path: 'vehicule',
-    component : VehiculeComponent
+    component: VehiculeComponent
   },
   {
     path: 'voiture',

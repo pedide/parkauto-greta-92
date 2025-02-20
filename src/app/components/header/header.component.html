@@ -1,17 +1,33 @@
-<!--Header-->
-
+<!--HEADER-->
 <header>
-<!-- Main header-->
- <div class="navbar">
-    <div class="navbar align-item-center d-flex">
-        <img class="picture" src="http://localhost:8086/images/edidebs_logo.png">
-    <strong style="font-size: 30px; color: white;">PARK AUTO</strong>
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="search vehicule">
-    </div>
-    <span class="fas fa-search-icon"></span>
-    </div>
- </div>
+  
+    <!--MAIN HEADER-->
+    <div class="navbar">
+        <div class="navbrad align-item-center d-flex">
+            <!-- <i style="font-size: 40px; color:white;" class="fas fa-shopping-cart">&nbsp;
+            </i> -->
+                <img class="picture" src="http://localhost:8086/images/logo_EBS_g-transparent_white01.png" style="height: 50px;width: 50px;">
+            <strong style="font-size: 30px; color: white;">Park Auto</strong>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="search products">
+
+            </div>
+            <span class="fas fa-search search-icon"></span>
+        </div>       
 
 
+        <h5 class="nav-item">
+            <a class="nav-link" [routerLink]="['/user/management']">User management</a>
+        </h5>
+
+        <h5 class="nav-item">
+            <a class="nav-link" [routerLink]="['/login']">Login</a>
+        </h5>
+        <h5 class="nav-item">
+            <a class="nav-link" [routerLink]="['/register']">Register</a>
+        </h5>
+
+
+
+    </div>
 </header>
