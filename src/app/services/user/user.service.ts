@@ -14,23 +14,23 @@ export class UserService {
 
   constructor(private http:HttpClient) { }
 
-  public getUsers() : Observable<User[] | HttpErrorResponse>{
-    return this.http.get<User[]>(`${this.host}user/list`);
+  public getUsers() : Observable<User[]> {
+    return this.http.get<User[]>(`${this.host}/api/auth/list`);
 
   }
 
-  public addUser(formData:FormData): Observable<User | HttpErrorResponse> {
-    return this.http.post<User>(`${this.host}user/add`,formData);
+  public addUser(formData:FormData): Observable<User > {
+    return this.http.post<User>(`${this.host}/api/auth/add`,formData);
 
   }
 
-  public updateUser(formData: FormData): Observable<User | HttpErrorResponse> {
-    return this.http.post<User>(`${this.host}user/update`, formData);
+  public updateUser(formData: FormData): Observable<User > {
+    return this.http.post<User>(`${this.host}/api/auth/update`, formData);
 
   }
 
   public deleteUser(userId: number): Observable<CustomHttpResponse> {
-    return this.http.delete<CustomHttpResponse>(`${this.host}delete/${userId}`);
+    return this.http.delete<CustomHttpResponse>(`${this.host}/api/auth/delete/${userId}`);
 
   }
 
