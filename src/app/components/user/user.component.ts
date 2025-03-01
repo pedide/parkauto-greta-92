@@ -18,6 +18,7 @@ export class UserComponent  implements OnInit{
   public users: User[] = [];
   public refreshing: boolean = false;
   private subscriptions : Subscription[] =[];
+  declare public selectedUser: User | null;
 
   constructor(private userService:UserService, private notificationService:NotificationService){}
 
@@ -69,4 +70,18 @@ export class UserComponent  implements OnInit{
     }
 
   }
+
+  public onSelectUser(selectedUser:User):void{
+    this.selectedUser = selectedUser;
+    document.getElementById('openUserInfo');
+
+  }
+
+  onEditUser(_t50: User) {
+    throw new Error('Method not implemented.');
+  }
+  onDeleteUser(arg0: number) {
+    throw new Error('Method not implemented.');
+  }
+
 }
